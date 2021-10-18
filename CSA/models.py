@@ -6,3 +6,22 @@ class Quote(models.Model):
 
     def __str__(self):
         return f'{self.content}'
+
+class QuoteBCA(models.Model):
+    content = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f'{self.content}'
+
+
+class QuoteBSC(models.Model):
+    content = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f'{self.content}'
+
+class QuoteMSC(models.Model):
+    content = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f'{self.content}'

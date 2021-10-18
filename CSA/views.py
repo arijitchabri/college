@@ -1,16 +1,25 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Quote
+from . import models
 
 # Create your views here.
 def admission(request):
     context = {
-        'data' : Quote.objects.all(),
+        'data' : models.Quote.objects.all(),
     }
     return render(request, ('csa/csa.html'), context=context)
 def msc(request):
-    return render(request, ('csa/msc.html'))
+    context = {
+        'data' : models.QuoteMSC.objects.all(),
+    }
+    return render(request, ('csa/msc.html'), context=context)
 def bsc(request):
-    return render(request, ('csa/bsc.html'))
+    context = {
+        'data' : models.QuoteBSC.objects.all(),
+    }
+    return render(request, ('csa/bsc.html'), context=context)
 def bca(request):
-    return render(request, ('csa/bca.html'))
+    context = {
+        'data' : models.QuoteBCA.objects.all(),
+    }
+    return render(request, ('csa/bca.html'), context=context)
