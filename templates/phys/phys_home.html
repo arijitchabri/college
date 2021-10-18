@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = 'stylesheet' href = "{%static 'style.css'%}">
+
+</head>
+<body>
+    <div class="container">
+        <img src="{%static 'phys.jpg'%}" alt="Physics" style="border-radius:1%">
+        <h1 class="page-header">Welcome to Physics Department</h1>  
+        <p class= "para"> Afraid of your capabilities <br> Don't let others decide things for you.</p>
+        <div>
+            <a href="{%url 'college_home'%}"><button  class= "BUTTON_PMG"> Home </button></a>
+            <a href="{%url 'phys_bsc'%}"><button  class= "BUTTON_PMG"> Bsc </button></a>
+            <a href="{%url 'phys_msc'%}"><button  class= "BUTTON_PMG"> Msc </button></a>
+        </div>
+    </div>
+</body>
+</html> 
+

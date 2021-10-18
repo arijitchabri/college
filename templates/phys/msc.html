@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = 'stylesheet' href = "{%static 'style.css'%}">
+
+</head>
+<body>
+    <div class="container">
+        <img src="{%static 'phys.jpg'%}" alt="Physics" style="border-radius:1%">
+        <h1 class="page-header">Welcome to M.Sc</h1>  
+        <p class= "para"> Now is better than never
+        <br> But sometimes never is better than right now.</p>
+        <div>
+            <a href="{%url 'phys_home'%}"><button  class= "BUTTON_PMG"> Phys_dep </button></a>
+            <a href="{%url 'college_home'%}"><button  class= "BUTTON_PMG"> Home </button></a>
+        </div>
+    </div>
+</body>
+</html> 
+
