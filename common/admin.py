@@ -6,11 +6,10 @@ from .models import Quote
 admin.site.site_header = 'CTCJ College'
 class QuoteAdmin(admin.ModelAdmin):
     list_display = ('content', 'data_created')
-    list_filter = ('data_created',)
     search_fields = ('content',)
 
     filter_horizontal = ()
-    list_filter = ()
+    list_filter = ('data_created',)
     fieldsets = ()
 
 admin.site.register(Quote, QuoteAdmin)
