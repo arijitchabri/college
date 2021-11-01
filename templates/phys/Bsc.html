@@ -9,8 +9,9 @@
     <div class="container">
         <img src="{% static 'phys.jpg' %}" alt="Physics" style="border-radius:1%">
         <h1 class="page-header">Welcome to B.Sc</h1>
-        <p class= "para"> Now is better than never
-        <br> But sometimes never is better than right now.</p>
+        {% for q in data%}
+        <p class="para">{{ q.content }}</p>
+        {% endfor %}
         <div>
             <a href="{%url 'phys_home'%}"><button  class= "BUTTON_PMG"> Phys_dep </button></a>
             <a href="{% url 'college_home'%}"><button  class= "BUTTON_PMG"> Home </button></a>

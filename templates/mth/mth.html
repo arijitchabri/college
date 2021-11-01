@@ -15,9 +15,9 @@
     <div class="text-center lg:w-2/3 w-full">
       <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Welcome to Mathemaitcs Department </h1>
 	  <br>
-      <p class="title-font sm:text-2xl text-2xl mb-4 font-small text-white">"Maths is the universal language of science"</p>
-	  
-      <br>
+    {% for q in data%}
+    <p class="title-font sm:text-2xl text-2xl mb-4 font-small text-white">{{ q.content }}</p>
+    {% endfor %}
 	  <h3 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Course Offer</h1>
 	  <br>
 	  <div class="flex justify-center">
